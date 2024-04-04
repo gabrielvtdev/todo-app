@@ -2,6 +2,8 @@
 
 This is a simple todo list application built with Vue.js. It allows users to create, manage, and delete todo items.
 
+![Screenshot_5](https://github.com/gabrielvtdev/todo-app/assets/100651934/be97180a-7ea9-48a9-85da-2151ed37bb2e)
+
 ## Features
 
 - **Create Todo**: Users can add new todo items by entering a description and selecting a category.
