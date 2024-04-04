@@ -1,7 +1,55 @@
-# Vue 3 + Vite
+# Vue.js Todo List App
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is a simple todo list application built with Vue.js. It allows users to create, manage, and delete todo items.
 
-## Recommended IDE Setup
+## Features
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+- **Create Todo**: Users can add new todo items by entering a description and selecting a category.
+- **Manage Todos**: Users can mark todos as done or not done, edit todo descriptions, and delete todos.
+- **Local Storage**: Todos and user's name are stored in the browser's local storage, so they persist across page reloads.
+- **Responsive Design**: The application is designed to work well on various screen sizes, from desktop to mobile.
+
+## Setup
+
+To run this application locally, follow these steps:
+
+1. Clone this repository to your local machine:
+
+   ```bash
+   git clone https://github.com/your-username/vue-todo-list.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd vue-todo-list
+   ```
+
+3. Install dependencies using npm or yarn:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run serve
+   # or
+   yarn serve
+   ```
+
+5. Open your browser and navigate to `http://localhost:8080` to view the application.
+
+## Technologies Used
+
+- Vue.js: A progressive JavaScript framework for building user interfaces.
+- HTML/CSS: Markup and styling languages for creating web pages.
+- JavaScript: Programming language for adding interactivity to web pages.
+- Local Storage: Browser feature for storing data locally.
+
+## Credits
+
+This application was created by [gabrielvtdev]. Feel free to contribute by submitting bug reports, feature requests, or pull requests.
