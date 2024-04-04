@@ -1,18 +1,18 @@
 <script setup>
 import { ref, onMounted, computed, watch } from "vue"
-
+// Define reactive variables
 const todos = ref([])
 const name = ref("")
-
+// Define input variables
 const input_content = ref("")
 const input_category = ref(null)
-
+// Compute sorted todos
 const todos_asc = computed(() =>
   todos.value.sort((a, b) => {
-    return b.createdAt - a.createdAT
+    return a.createdAt - b.createdAT
   })
 )
-
+// Add a todo
 const addTodo = () => {
   if (input_content.value.trim() === "" || input_category.value === null) {
     return
@@ -24,7 +24,11 @@ const addTodo = () => {
     createdAt: new Date().getTime(),
   })
 }
-
+// Remove a todo
+const removeTodo = (todo) => {
+  todos.value = todos.value.filter((t) => t !== todo)
+}
+// Watch for changes in todos and name, store in localStorage
 watch(
   todos,
   (newVal) => {
@@ -36,10 +40,10 @@ watch(
 watch(name, (newVal) => {
   localStorage.setItem("name", newVal)
 })
-
+// On component mounted, retrieve name and todos from localStorage
 onMounted(() => {
   name.value = localStorage.getItem("name") || ""
-  todos.value = JSON.parse(localStorage.getTime("todos")) || []
+  todos.value = JSON.parse(localStorage.getItem("todos")) || []
 })
 </script>
 
