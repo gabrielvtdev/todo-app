@@ -13,6 +13,8 @@ const todos_asc = computed(() =>
   })
 )
 
+const addTodo = () => {}
+
 watch(name, (newVal) =>{
   localStorage.setItem('name', newVal)
 })
@@ -28,6 +30,42 @@ onMounted(() =>{
       <h2 class="title">
         Whats's up, <input type="text" placeholder="Name here" v-model="name" />
       </h2>
+    </section>
+
+    <section class="create-todo">
+      <h3>CREATE A TODO</h3>
+
+      <form @submit.prevent="addTodo">
+        <h4>What's on your todo list?</h4>
+        <input 
+            type="text" 
+            placeholder="e.g. make a video"
+            v-model="input_content"/>
+        <h4>Pick a category</h4>
+        <div class="options">
+          <label>
+            <input 
+                type="radio"
+                name="category"
+                value="business"
+                v-model="input_category"/>
+            <span class="bubble business"></span>
+            <div>Business</div>    
+          </label>
+
+          <label>
+            <input 
+                type="radio"
+                name="category"
+                value="personal"
+                v-model="input_category"/>
+            <span class="bubble personal"></span>
+            <div>Business</div>    
+          </label>
+
+          {{ input_category }}
+        </div>
+      </form>
     </section>
   </main>
 </template>
