@@ -18,7 +18,7 @@ To run this application locally, follow these steps:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/vue-todo-list.git
+   git clone https://github.com/gabrielvtdev/todo-app
    ```
 
 2. Navigate to the project directory:
